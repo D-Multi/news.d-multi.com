@@ -31,10 +31,14 @@
   </div>
   <a id="centerlogo" href="https://d-multi.com"><img src="https://dguis.github.io/RES/New%20Logos/Nav.png" alt="D-Multi logo" class="logo" id="centerlogo" title="Home"></a>
   </nav>
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
+    <article class="post">
+  <h1>{{ page.title }}</h1>
+   <div class="entry">
+    {{ content }}
+  </div>
+ <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+      </div>      
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
