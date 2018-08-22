@@ -1,8 +1,45 @@
----
-layout: post
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} | {{ site.description }}</title>
 
-<article class="page">
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+   <link href="https://d-multi.github.io/main.css" rel="stylesheet">
+<link href="https://dguis.github.io/RES/New%20Logos/B500x500t.png" rel="icon">
+<link href="https://d-multi.github.io/slideshow.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    nav{
+position: absolute;
+margin: 0;
+}
+    .date{
+     margin: 0 50px; 
+    }
+    </style>
+  </head>
+
+  <body>
+<nav class="nav">
+  <a href="#" id="menu" style="display: none;" title="Menu">&#x2630;</a>
+  <div id="links">
+  <a class="logo" href="https://d-multi.com" style="margin-right: 20px;"><img src="https://dguis.github.io/RES/New%20Logos/Nav.png" alt="D-Multi logo" class="logo" title="Home"></a>
+  <a href="https://news.d-multi.com" class="home" title="News"><img src="https://dguis.github.io/RES/news.png" style="height: 25px; vertical-align: text-top;" /> News</a>
+  <a href="https://support.d-multi.com" title="Support">Support</a>
+  <a href="https://d-multi.com" title="D-Multi Homepage">D-Multi Homepage</a>
+  </div>
+  <a id="centerlogo" href="https://d-multi.com"><img src="https://dguis.github.io/RES/New%20Logos/Nav.png" alt="D-Multi logo" class="logo" id="centerlogo" title="Home"></a>
+  </nav>
+        <div class="page">
+    <article class="page">
 
   <h1>{{ page.title }}</h1>
 
@@ -10,3 +47,9 @@ layout: post
     {{ content }}
   </div>
 </article>
+    {% include analytics.html %}
+    </div>
+    <script src="https://d-multi.github.io/main.js"></script>
+  </body>
+</html>
+
